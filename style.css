@@ -1,0 +1,174 @@
+/* General Body Styling */
+body {
+    font-family: Tahoma, Verdana, Arial, sans-serif;
+    background-color: #1e1e1e; /* Dark gray background */
+    margin: 0;
+    padding: 0;
+    color: #ffffff; /* White text for contrast */
+    text-align: center; /* Centers text */
+}
+
+p {
+    font-family: Tahoma, Verdana, Arial, sans-serif;
+    font-size: 1em; /* Standard paragraph size */
+    line-height: 1.5em; /* Adequate line spacing for readability */
+    color: #ffffff; /* White text for contrast against dark backgrounds */
+    margin-bottom: 1.5em; /* Add spacing between paragraphs */
+}
+
+
+/* Header Section */
+header {
+    background-color: #282828;
+    padding: 40px 20px; /* Add extra padding */
+    text-align: center;
+    position: relative; /* Ensure particles are positioned relative to header */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Logo Styling */
+header img {
+    width: 150px;
+    display: block;
+    margin: 0 auto 20px auto; /* Centers the logo */
+    z-index: 1; /* Ensure the logo stays on top */
+}
+
+/* Particle Styling */
+.particle {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: #ff4d4d;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+}
+
+/* Particle Animation */
+@keyframes particleMovement {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(var(--x), var(--y)) scale(0);
+        opacity: 0;
+    }
+}
+
+/* Individual Particle Variations */
+.particle1 {
+    --x: -100px;
+    --y: -100px;
+    animation: particleMovement 3s infinite ease-in-out;
+}
+
+.particle2 {
+    --x: 100px;
+    --y: -50px;
+    background-color: #ff6666;
+    animation: particleMovement 3s infinite ease-in-out 0.2s;
+}
+
+.particle3 {
+    --x: -50px;
+    --y: 100px;
+    background-color: #ff9999;
+    animation: particleMovement 3s infinite ease-in-out 0.4s;
+}
+
+.particle4 {
+    --x: 120px;
+    --y: 120px;
+    background-color: #ffcccc;
+    animation: particleMovement 3s infinite ease-in-out 0.6s;
+}
+
+/* Header Text */
+h1 {
+    color: #ff4d4d; /* Red color to match your logo */
+    font-family: Impact, Arial Black, sans-serif;
+    font-size: 2.5em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 0; /* Remove extra margin */
+}
+
+/* Content Section */
+section {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px; /* Limits width for better readability */
+    background-color: #333333; /* Darker gray for content sections */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: left; /* Aligns text inside sections to the left */
+}
+
+/* Button Styling */
+a.button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #ff4d4d;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px #ff4d4d;
+    margin-top: 10px; /* Add spacing between buttons */
+}
+
+a.button:hover {
+    box-shadow: 0 0 20px #ff4d4d, 0 0 30px #ff4d4d;
+    transform: scale(1.05);
+}
+
+ul {
+    list-style: none; /* Remove default bullet points */
+    padding-left: 0;
+}
+
+ul li {
+    position: relative;
+    padding-left: 20px; /* Add some space to the left for the "X" */
+}
+
+ul li::before {
+    content: "◈"; /* Use an X symbol (Unicode) */
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #ff4d4d; /* Red color to match your theme */
+    font-size: 1.2em; /* Adjust the size of the X */
+    line-height: 1; /* Make sure the X aligns with the text */
+}
+
+/* Footer Styling */
+#footer {
+    background-color: #282828; /* Dark background to match the site's theme */
+    padding: 20px;
+    text-align: center;
+    color: #ffffff; /* White text for contrast */
+    margin-top: 40px;
+    border-top: 2px solid #ff4d4d; /* Optional red border to match your theme */
+}
+
+#footer a {
+    color: #ff4d4d; /* Red links to match theme */
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+#footer a:hover {
+    color: #ff9999; /* Lighten the red on hover */
+}
+
+.footer-content {
+    font-family: Tahoma, Verdana, Arial, sans-serif; /* Clean, readable font */
+}
+
+.footer-content p {
+    margin: 5px 0;
+}
