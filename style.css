@@ -172,3 +172,33 @@ ul li::before {
 .footer-content p {
     margin: 5px 0;
 }
+
+/* General Mobile Styles */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px; /* Increase font size for readability */
+    }
+
+    #twitch-live iframe {
+        width: 100%; /* Ensure iframe is full-width on mobile */
+        height: 300px; /* Adjust height for smaller screens */
+    }
+
+    .video-grid {
+        grid-template-columns: 1fr; /* Stack videos in a single column for mobile */
+    }
+
+    #appointments, #payment, #support {
+        padding: 10px; /* Reduce padding for smaller screens */
+        max-width: 100%; /* Ensure full width is used */
+    }
+
+    .footer-content p {
+        margin: 10px 0; /* Adjust spacing between elements */
+    }
+
+    a.button {
+        padding: 8px 15px; /* Reduce button padding */
+        font-size: 1em; /* Adjust button font size */
+    }
+}
