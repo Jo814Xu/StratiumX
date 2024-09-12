@@ -47,7 +47,13 @@
         <h2>Support Us</h2>
         <p>Tip or pay for services via:</p>
         <ul>
-            <li><a href="https://paypal.me/StratiumXGaming?country.x=CA&locale.x=en_US" class="button">PayPal</a></li>
+            <li><script src="https://www.paypal.com/sdk/js?client-id=BAAXZzuVRYgfWfnyMVMEEAks0KjobdqTBKGM6v2ZyvOVJRQ9seNewEUttbSJUA5BuxtZXbqBX5b_xyBbk0&components=hosted-buttons&disable-funding=venmo&currency=CAD"></script>
+                <div id="paypal-container-VTL38QMYY27JA"></div>
+                <script>
+                  paypal.HostedButtons({
+                    hostedButtonId: "VTL38QMYY27JA",
+                  }).render("#paypal-container-VTL38QMYY27JA")
+                </script></li>
         </ul>
     </section>
 
